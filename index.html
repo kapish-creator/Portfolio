@@ -68,27 +68,19 @@
     .image-container-2 div,
     .image-container-3 div,
     .image-container-4 div {
-      flex: 1 1 calc(25% - 40px);
-      max-width: 300px;
+      flex: 1 1 calc(25% - 40px); /* 4 columns on desktop */
+      max-width: calc(25% - 40px); /* 4 columns on desktop */
       text-align: center;
     }
 
     /* Media Queries for Responsive Design */
-    @media (max-width: 1024px) {
-      .image-container div,
-      .image-container-2 div,
-      .image-container-3 div,
-      .image-container-4 div {
-        flex: 1 1 calc(33.33% - 40px);
-      }
-    }
-
     @media (max-width: 768px) {
       .image-container div,
       .image-container-2 div,
       .image-container-3 div,
       .image-container-4 div {
-        flex: 1 1 calc(50% - 40px);
+        flex: 1 1 calc(50% - 40px); /* 2 columns on mobile */
+        max-width: calc(50% - 40px); /* 2 columns on mobile */
       }
 
       h1 {
@@ -110,13 +102,6 @@
     }
 
     @media (max-width: 480px) {
-      .image-container div,
-      .image-container-2 div,
-      .image-container-3 div,
-      .image-container-4 div {
-        flex: 1 1 calc(100% - 40px);
-      }
-
       h1 {
         font-size: 30px;
       }
